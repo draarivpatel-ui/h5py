@@ -43,7 +43,7 @@ import operator
 import numpy as np
 from .base import product
 from .compat import filename_encode
-from .. import h5z, h5p, h5d, h5f
+from .. import h5z, h5p, h5f
 
 
 _COMP_FILTERS = {'gzip': h5z.FILTER_DEFLATE,
