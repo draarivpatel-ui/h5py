@@ -1,6 +1,5 @@
 import os
 import sysconfig
-import platform
 from glob import glob
 from os.path import join as pjoin, basename
 from shutil import copy
@@ -25,7 +24,6 @@ def main():
 
         zlib_root = os.environ.get("ZLIB_ROOT")
         if zlib_root:
-            arch = platform.machine().lower()
             # z.dll from zlib 1.3.2; previously zlib.dll / zlib1.dll
             f = pjoin(zlib_root, "bin", "z.dll")
             copy(f, pjoin(sitepackagesdir, 'h5py', basename(f)))
